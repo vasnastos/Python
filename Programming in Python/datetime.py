@@ -1,0 +1,15 @@
+import math
+#Χρήση συναρτήσεων της βιβλιοθληκης math
+x=math.sqrt(256)
+y=pow(4,5)
+z=int(x)+int(y)
+print("x:"+str(x))
+print("y:"+str(y))
+print("z:"+str(z))
+val1=input("Give frst integer:")
+val2=input("Give second integer:")
+val3=input("Give third inyeger:")
+min=min(val1,val2,val3)
+max=max(val1,val2,val3)
+print("Among 3 input integers max:"+str(max))
+print("Among 3 input integers min:"+str(min))
