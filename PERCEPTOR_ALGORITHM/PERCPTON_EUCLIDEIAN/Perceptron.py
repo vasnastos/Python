@@ -192,6 +192,7 @@ elif int(option)==2:
    tk.showinfo("EPOCH USAGE","Total epochs used:"+str(epoch))
    if str(answer)=="y" or str(answer)=="ae":
        es.saver(e,epoch)
+   mt.grid()
    mt.show()       
 else:
    sys.exit(0)

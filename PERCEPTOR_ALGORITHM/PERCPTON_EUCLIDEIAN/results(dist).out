@@ -1,4 +1,4 @@
- Â©Nastos Vasileios 2020 ARTA
+ ©Nastos Vasileios 2020 ARTA
  Execute Perceptron Algorithm using Euclidean Distance Between the initial weights 
  and the last weights of every epoch
  File created at:18:37:01--2020-12-30
@@ -7,7 +7,7 @@
 	NUMBER_SEQUENCE(e)	EPOCHS
    	0.01	   			   2
    	0.001	   			   3
-   	0.0001	   		       3
+   	0.0001	   		   3
    	1e-05	   			   2
    	1e-06	   			   5
    	1e-07	   			   5

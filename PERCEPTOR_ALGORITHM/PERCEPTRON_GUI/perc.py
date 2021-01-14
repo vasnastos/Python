@@ -17,26 +17,28 @@ import tkinter.messagebox as tk
 #----------------------------------------
 #Set Learning Rate as 0.6
 #Weight vector 
-n=3
-lr=0.6
+#Αρχικά δεδομένα
 
 #Αρχικά βάρη/Τυχαία τιμή από το διάστημα [-1,1]
 w=[]
-meter=0
-while meter<=n:
-    w.append(random.randrange(-1,1))
-    meter+=1
-#Plotting
-fig = mt.figure()
+n=3
+lr=0.6
 ax = mt.axes(projection='3d')
+fig = mt.figure()
 X = np.arange(-5,5,0.25)
 Y = np.arange(-5,5,0.25)
+Z=[]
 a = 2;
 b = -0.5;
 c = 0.5;
 d = 1.5;
 X, Y = np.meshgrid(X, Y)
 Z= (-a/c)*X+(-b/c)*Y+(-d/c);
+def Init_Weights():
+    meter=0
+    while meter<=n:
+        w.append(random.randrange(-1,1))
+        meter+=1
 #----------------------------------------
 
 #-----------------------------------------
@@ -70,25 +72,10 @@ class spot:
     def toStr(self):
         return str(self.x)+"-"+str(self.y)+"-"+str(self.z)+"-"+str(self.target)
 
-#open exdata.csv(Ανοιγμα αρχείου δεδομένων και τοποθέτηση σε
-# λίστα που περιέχει αντικείμενα spot(Μοντελοποίηση διανύσματος με κλάση).)
-def opendata(board):
-     y=open("exdata.csv","r")
-     for x in y:
-        data=x.split(",")
-        adata=spot(data[0],data[1],data[2],data[3])
-        board.append(adata) 
-     y.close()
-     #shuffle δεδομένων ώστε να πάρουν τυχαίες θέσεις στην λίστα
-     random.shuffle(board)
-
-#------------------------------------------------
 
 #calculate stimulation
 #Initiate original data
 #Εισαγωγή δεδομένων σε πίνακες
-def ONINIT(data):
-    opendata(data)
 
 def calcY(data,pos):
        if float(w[0])+float(w[1])*float(data[int(pos)].getX())+float(w[2])*float(data[int(pos)].getY())+float(w[3])*float(data[int(pos)].getZ())>=0:
@@ -125,46 +112,20 @@ def Percepton(data):
        j+=1
     return j
 
-#Display Data in Command Line
-#Εμφάνιση αρχικών δεδομένων στην γραμμή εντολών
-def show_data(board):
-    print('Patterns used')
-    for x in board:
-        print('pattern_:'+x.toStr())
-#-----------------------------------------------------------
-
-#-----------------------------------------------------
-#Define a command line menu
-#Μενού γραμμής εντολών
-def menu():
-    print('Welcome to Perceptron Algorithm Exucutable!!!!')
-    print('1-Display Data\n')
-    print('2-Show Initial Plotting\n')
-    print('3-End Task\n')
-    x=input('Select option:')
-    return x
-#-----------------------------------------------------------
 #Main Code
-data=[]
-ONINIT(data)
-option=menu() 
-if int(option)==1:
-    show_data(data)
-elif int(option)==2:
-   #Εμφάνιση δεδομένων Plotting
-   epoch=Percepton(data)
-   Z=(-float(w[1])*X-float(w[2])*Y-float(w[0]))/w[3]
-   ax.plot_surface(X,Y,Z) 
-   for x in range(0,len(data)):
-       if int(data[x].getTarget())==0:
-           ax.scatter(float(data[x].getX()),float(data[x].getY()),float(data[x].getZ()),c="blue",marker='o')
-       else:
-           ax.scatter(float(data[x].getX()),float(data[x].getY()),float(data[x].getZ()),c="red",marker='x')
-   #Εμφάνιση συνολικού αριθμού εποχών που χρειάστηκαν
-   tk.showinfo("EPOCH USAGE","Total epochs used:"+str(epoch))
-   mt.grid()
-   mt.show()       
-else:
-   sys.exit(0)
-
+def start_perceptron(data):
+    Init_Weights()
+     #Εμφάνιση δεδομένων Plotting
+    epoch=Percepton(data)
+    Z=(-float(w[1])*X-float(w[2])*Y-float(w[0]))/w[3]
+    ax.plot_surface(X,Y,Z) 
+    for x in range(0,len(data)):
+        if int(data[x].getTarget())==0:
+             ax.scatter(float(data[x].getX()),float(data[x].getY()),float(data[x].getZ()),c="blue",marker='o')
+        else:
+            ax.scatter(float(data[x].getX()),float(data[x].getY()),float(data[x].getZ()),c="red",marker='x')
+        #Εμφάνιση συνολικού αριθμού εποχών που χρειάστηκαν
+    tk.showinfo("EPOCH USAGE","Total epochs used:"+str(epoch))
+    #mt.grid()
+    mt.show()       
 #----------------------------------------------------------
