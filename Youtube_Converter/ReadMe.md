@@ -29,7 +29,7 @@
 </tr>
 <tr>
 <td>vlclib.dll as an envirommental variable</td>
-<td><a href="https://stackoverflow.com/questions/5971312/how-to-set-environment-variables-in-python"><img src="https://miro.medium.com/max/5462/1*1G8pYJBowBvxHLoh08D0hA.jpeg" width="20" height=""></img></a>
+<td><a href="https://stackoverflow.com/questions/5971312/how-to-set-environment-variables-in-python"><img src="https://miro.medium.com/max/5462/1*1G8pYJBowBvxHLoh08D0hA.jpeg" width="20" height="20"></img></a>
  </tr>
  <tr>
  <td>Vlc Test App</td>
