@@ -12,7 +12,7 @@
        <li>Sample Data:<a href="https://raw.githubusercontent.com/vasnastos/Python_Repository/main/MSTEAMS_APP/SOURCE_EDITION(1)/lab_source.csv" target="_blank">CSV</a></li>
        <li>Source Code:<a href="https://github.com/vasnastos/Python_Repository/tree/main/MSTEAMS_APP/SOURCE_EDITION(1)" target="_blank">Source Folder</a>
        </li>
-       <li>PyCharm Project:<a href="https://github.com/vasnastos/Python_Repository/blob/main/MSTEAMS_APP/MSTEAMS.zip">Source.zip</a></li>
+       <li>PyCharm Project:<a href="https://github.com/vasnastos/Python_Repository/raw/main/MSTEAMS_APP/MSTEAMS.zip">Source.zip</a></li>
      </ul>
      <br>
      <hr>
