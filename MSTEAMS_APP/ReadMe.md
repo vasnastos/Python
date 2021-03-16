@@ -16,6 +16,8 @@
      </ul>
      <br>
      <hr>
+    <b><li>Barchart Example:<a href="https://github.com/vasnastos/Python_Repository/tree/main/MSTEAMS_APP/BarChart">Barchart</li></b>
+    <b><li>Pichart Example:<a href="https://github.com/vasnastos/Python_Repository/tree/main/MSTEAMS_APP/PieChart">PieChart</a></b>
  </ul>
 </body>
 </html>
