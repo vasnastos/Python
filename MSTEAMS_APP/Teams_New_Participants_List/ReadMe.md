@@ -9,5 +9,8 @@
 -<b>Sample Gui:</b><a href="gui.py">Gui</a><br>
 -<b>Driver Program:</b><a href="main.py">Main</a><br>
 -<b>Sample Source File:</b><a href="source.csv">Source</a><br>
+  <hr>
+  <b style="font-size:16px;">Run Program on Terminal<br>
+    -python gui.py</b>
 </body>
 </html>
