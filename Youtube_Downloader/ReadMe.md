@@ -1,3 +1,7 @@
 # Youtube Downloader Music Player
 
-**Desktop Edition**
+## REQUIRMENTS
+
+* :pushpin:pip install pytube
+* :pushpin:pip install pyqt5/conda install -c anaconda pyqt
+* :pushpin:pip install pyqt5-tools
