@@ -1,3 +1,8 @@
+import random
+
+def random_data(length):
+    return [random.randint(-100,100) for _ in range(length)]
+
 def high_complexity(array:list):
     maxval=0
     low_index=-1
@@ -17,7 +22,7 @@ def prefix(array:list):
         prefixb.append(prefixb[i]+array[i])
     return prefixb
 
-def complexitN_2(array:list):
+def complexityN_2(array:list):
     prf=prefix(array)
     maxsum=0
     high_index=-1
@@ -56,8 +61,14 @@ def complexityN(array:list):
 def main():
     array=[9000,1,2000,4,-1,-7000,-10000,-500,-4000]
     print(high_complexity(array))
-    print(complexityn_2(array))
-    print(complexityn_3(array))
+    print(complexityN_2(array))
+    print(complexityN(array))
+
+def random_array():
+    array=random_array(100)
+    print(high_complexity(array))
+    print(complexityN_2(array))
+    print(complexityN(array))
 
 
 if __name__=='__main__':
